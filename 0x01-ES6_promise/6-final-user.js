@@ -8,7 +8,12 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   ])
     .then((results) => {
       const [photo, user] = results;
-      // console.log([user, photo]);
+      if (photo.status === 'rejected') {
+        return ([user, {
+          status: photo.status,
+          value: `Error: ${photo.reason.message}`,
+        }]);
+      }
       return [user, photo];
     })
   );
