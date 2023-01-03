@@ -8,10 +8,8 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   ])
     .then((results) => {
       const [photo, user] = results;
-      if (photo.status === 'rejected') {
-        return [user.value, photo.reason];
-      }
-      return [user.value, photo.value];
+      // console.log([user, photo]);
+      return [user, photo];
     })
   );
 }
