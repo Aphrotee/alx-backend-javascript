@@ -1,4 +1,4 @@
-interface Student {
+export interface Student {
     firstName:string;
     lastName:string;
     age:number;
@@ -7,20 +7,33 @@ interface Student {
 
 
 const student1: Student = {
-    firstName: 'Temitope',
-    lastName: 'Áiyebogan',
-    age: 19,
-    location: 'Ilaje',
+  firstName: 'Temitope',
+  lastName: 'Áiyebogan',
+  age: 19,
+  location: 'Ilaje',
 }
 
 const student2: Student = {
-    firstName: 'Ayomide',
-    lastName: 'Ogunnoiki',
-    age: 19,
-    location: 'Ikeja',
+  firstName: 'Ayomide',
+  lastName: 'Ogunnoiki',
+  age: 19,
+  location: 'Ikeja',
 }
 
-const studentArray: Student[] = [student1, student2];
+const empty: Student = {
+  firstName: '',
+  lastName: '',
+  age: 0,
+  location: '',
+}
+
+const head: Student = {
+  firstName: 'firstName',
+  lastName: 'lastName',
+  age: 0,
+  location: 'location',
+}
+const studentArray: Student[] = [student1, student2, empty];
 
 const table = document.createElement('table');
 const thead = document.createElement('thead');
@@ -47,12 +60,4 @@ for (let studentInt of studentArray) {
   tbody.appendChild(trB);
 }
 
-  const trB = document.createElement('tr');
-  const c1 = document.createElement('td');
-  const c2 = document.createElement('td');
-  c1.innerHTML = '';
-  c2.innerHTML = '';
-  trB.appendChild(c1);
-  trB.appendChild(c2);
-  tbody.appendChild(trB);
-  document.appendChild(table);
+document.appendChild(table);
