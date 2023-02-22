@@ -23,3 +23,4 @@ const app = http.createServer((req, res) => {
 });
 
 app.listen(port, host);
+module.exports = app;
