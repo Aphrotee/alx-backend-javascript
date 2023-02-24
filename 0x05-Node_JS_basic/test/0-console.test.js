@@ -1,4 +1,4 @@
-const { expect } = require('chai');
+const { isEqual } = require('chai');
 const sinon = require('sinon');
 
 const displayMessage = require('../0-console');
@@ -18,7 +18,7 @@ describe('displayMessage', () => {
     displayMessage('Hello Holberton School!');
     displayMessage('We are going to learn Node JS today');
 
-    expect(consoleSpy.calledWith('Hello Holberton School!')).to.be.true;
+    isEqual(consoleSpy.calledWith('Hello Holberton School!')).to.be.true;
     expect(consoleSpy.calledWith('We are going to learn Node JS today')).to.be.true;
   });
 });
