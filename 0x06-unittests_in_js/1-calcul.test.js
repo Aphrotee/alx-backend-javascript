@@ -1,6 +1,5 @@
-const chai = require('chai');
 const { describe } = require('mocha');
-const assert = chai.assert;
+const assert = require('assert');
 const isEqual = assert.strictEqual;
 const calculateNumber = require('./1-calcul')
 
