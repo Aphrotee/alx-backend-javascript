@@ -18,6 +18,7 @@ class StudentsController {
         response.status(500);
         response.send(String(error));
       });
+
   }
 
   static getAllStudentsByMajor(request, response) {
@@ -37,6 +38,7 @@ class StudentsController {
         response.status(500);
         response.send(String(error));
       });
+
   }
 }
 

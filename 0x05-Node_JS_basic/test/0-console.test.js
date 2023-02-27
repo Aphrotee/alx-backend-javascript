@@ -10,9 +10,11 @@ describe('displayMessage', () => {
     consoleSpy = sinon.spy(console, 'log');
   });
 
+
   afterEach(() => {
     consoleSpy.restore();
   });
+
 
   it('logs to the console the right messages', () => {
     displayMessage('Hello Holberton School!');
@@ -21,4 +23,5 @@ describe('displayMessage', () => {
     isEqual(consoleSpy.calledWith('Hello Holberton School!')).to.be.true;
     expect(consoleSpy.calledWith('We are going to learn Node JS today')).to.be.true;
   });
+
 });

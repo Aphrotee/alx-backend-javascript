@@ -14,4 +14,5 @@ app.get('/students', (req, res) => {
   StudentsController.getAllStudents(req, res);
 });
 
+
 app.listen(port, host);

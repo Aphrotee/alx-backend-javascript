@@ -30,10 +30,12 @@ function countStudents(fileName) {
           resolve(message);
         }
       });
+
     } else {
       reject(new Error('Cannot load the database'));
     }
   });
+
   return P;
 }
 

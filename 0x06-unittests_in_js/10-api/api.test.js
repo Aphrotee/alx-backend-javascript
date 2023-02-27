@@ -143,7 +143,7 @@ describe('tests api response for payment methods', () => {
 */
 describe('tests api response for login and available payment methods', () => {
   it('checks status code', (done) => {
-    request.post('http://127.0.0.1:7865/login', {'userName': 'Betty'}, (err, res, body) =>{
+    request.post('http://127.0.0.1:7865/login', {form: {'userName': 'Betty'}}, (err, res, body) =>{
       new Promise((resolve, reject) => {
         if (err) {
           reject(err);
@@ -158,7 +158,7 @@ describe('tests api response for login and available payment methods', () => {
   });
 
   it('checks response body', (done) => {
-    request.post('http://127.0.0.1:7865/login', {'userName': 'Betty'}, (err, res, body) =>{
+    request.post('http://127.0.0.1:7865/login', {form: {'userName': 'Betty'}}, (err, res, body) =>{
       new Promise((resolve, reject) => {
         if (err) {
           reject(err);
@@ -173,7 +173,7 @@ describe('tests api response for login and available payment methods', () => {
   });
 
   it('checks status code', (done) => {
-    request.post('http://127.0.0.1:7865/login', {'userName': 'Opeyemi'}, (err, res, body) =>{
+    request.post('http://127.0.0.1:7865/login', {form: {'userName': 'Betty'}}, (err, res, body) =>{
       new Promise((resolve, reject) => {
         if (err) {
           reject(err);
@@ -188,7 +188,7 @@ describe('tests api response for login and available payment methods', () => {
   });
 
   it('checks response body', (done) => {
-    request.post('http://127.0.0.1:7865/login', {'userName': 'Opeyemi'}, (err, res, body) =>{
+    request.post('http://127.0.0.1:7865/login', {form: {'userName': 'Opeyemi'}}, (err, res, body) =>{
       new Promise((resolve, reject) => {
         if (err) {
           reject(err);
