@@ -1,4 +1,3 @@
-const { describe } = require('mocha');
 const assert = require('assert');
 const isEqual = assert.strictEqual;
 const calculateNumber = require('./0-calcul')
